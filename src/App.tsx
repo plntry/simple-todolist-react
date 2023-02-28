@@ -1,10 +1,14 @@
-import React from 'react'
+import CreateBtn from './components/CreateBtn'
+import DescriptionInput from './components/DescriptionInput'
+import TitleInput from './components/TitleInput'
 
 function App () {
   return (
-    <div className="App">
-      hello!
-    </div>
+    <>
+      <TitleInput />
+      <DescriptionInput />
+      <CreateBtn />
+    </>
   )
 }
 
