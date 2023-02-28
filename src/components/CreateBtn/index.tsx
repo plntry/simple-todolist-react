@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { useAppDispatch } from '../../store'
 import { addNewTodo } from '../../store/todosSlice'
 import { CreateTodoContext } from '../CreateTodoBar'
@@ -10,11 +10,6 @@ function CreateBtn () {
 
   const title = context?.title
   const description = context?.description
-
-  useEffect(() => {
-    console.log(title, 'tit2')
-    console.log(description, 'descript2')
-  }, [context?.description, context?.title])
 
   return (
       <>
