@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from '.'
 
-const initialState = {
+const initialState: ITodos = {
   todos: []
 }
 
@@ -50,6 +50,6 @@ export const { add } = todosSlice.actions
 export const selectTodos = (state: RootState) => state.todos
 // export const selectTotalQuantity = (state) => state.cart.totalQuantity
 
-export const productsActions = todosSlice.actions
+export const todosActions = todosSlice.actions
 
 export default todosSlice

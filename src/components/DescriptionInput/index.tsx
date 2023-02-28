@@ -3,7 +3,10 @@ function DescriptionInput () {
       <>
         <label>
           Description:
-          <input type='text' />
+            <input
+                type='text'
+                placeholder='Enter description'
+            />
         </label>
       </>
   )

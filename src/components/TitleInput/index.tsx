@@ -3,7 +3,10 @@ function TitleInput () {
     <>
       <label>
         Title:
-        <input type='text' />
+        <input
+            type='text'
+            placeholder='Enter title'
+        />
       </label>
     </>
   )
