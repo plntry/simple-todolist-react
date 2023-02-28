@@ -15,8 +15,6 @@ const todosSlice = createSlice({
 
       const id = todos.length !== 0 ? Math.max(...todos.map(todo => todo.id)) + 1 : 1
 
-      console.log(action.payload, 'payload')
-
       if (title !== undefined && description !== undefined &&
         title.length !== 0 && description.length !== 0) {
         state.todos?.push(

@@ -4,7 +4,6 @@ import TodoItem from '../TodoItem'
 
 function TodosList () {
   const todos = Object.values(useSelector(selectTodos))[0]
-  console.log(todos, 'todos here')
 
   return (
     <>
