@@ -10,10 +10,6 @@ function TodosList () {
   const todos = (useSelector(selectTodos))
   console.log(todos, 'todos')
 
-  useEffect(() => {
-    dispatch(addNewTodo(1))
-  }, [dispatch])
-
   return (
     <>
       <TodoItem />

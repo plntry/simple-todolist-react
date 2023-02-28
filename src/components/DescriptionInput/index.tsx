@@ -1,12 +1,9 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { CreateTodoContext } from '../CreateTodoBar'
 
 function DescriptionInput () {
   const context = useContext(CreateTodoContext)
 
-  useEffect(() => {
-    console.log(context?.description, 'descript')
-  }, [context?.description])
   return (
       <>
         <label>

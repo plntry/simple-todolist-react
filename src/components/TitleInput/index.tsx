@@ -1,12 +1,8 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { CreateTodoContext } from '../CreateTodoBar'
 
 function TitleInput () {
   const context = useContext(CreateTodoContext)
-
-  useEffect(() => {
-    console.log(context?.title, 'title')
-  }, [context?.title])
 
   return (
     <>
