@@ -8,3 +8,10 @@ interface ITodo {
 interface ITodos {
   todos: IProduct[] | undefined
 }
+
+interface ICreateNewTodoContext {
+  title: string
+  setTitle: Dispatch<SetStateAction<string>>
+  description: string
+  setDescription: Dispatch<SetStateAction<string>>
+}

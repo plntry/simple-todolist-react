@@ -1,14 +1,10 @@
-import CreateBtn from './components/CreateBtn'
-import DescriptionInput from './components/DescriptionInput'
-import TitleInput from './components/TitleInput'
+import CreateTodoBar from './components/CreateTodoBar'
 import TodosList from './components/TodosList'
 
 function App () {
   return (
     <>
-      <TitleInput />
-      <DescriptionInput />
-      <CreateBtn />
+      <CreateTodoBar />
       <TodosList />
     </>
   )
