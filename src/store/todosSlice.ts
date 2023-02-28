@@ -28,7 +28,6 @@ const todosSlice = createSlice({
           }
         )
       }
-      console.log(state.todos?.length, 'after add')
     }
   }
 })

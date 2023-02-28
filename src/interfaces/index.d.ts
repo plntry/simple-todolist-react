@@ -9,6 +9,10 @@ interface ITodos {
   todos: IProduct[] | undefined
 }
 
+interface IStatusCheckbox {
+  status: boolean
+}
+
 interface ICreateNewTodoContext {
   title: string
   setTitle: Dispatch<SetStateAction<string>>
