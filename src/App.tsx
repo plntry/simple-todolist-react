@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import CreateTodoBar from './components/CreateTodoBar'
+import TodosList from './components/TodosList'
+import './App.css'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      hello!
+    <div className='App-container'>
+      <CreateTodoBar />
+      <TodosList />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
