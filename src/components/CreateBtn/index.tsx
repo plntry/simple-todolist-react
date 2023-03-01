@@ -29,6 +29,9 @@ function CreateBtn () {
         setIsDescriptionEmpty(false)
       }
     } else {
+      setIsTitleEmpty(false)
+      setIsDescriptionEmpty(false)
+
       dispatch(addNewTodo({ title, description }))
     }
   }
