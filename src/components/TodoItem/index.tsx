@@ -16,8 +16,6 @@ const TodoItem: React.FC<ITodoItemComp> = (props: ITodoItemComp) => {
   const arrOfFields = [`${id}.`, slicedText(title), slicedText(description), status]
 
   const handleOnChangeStatus = () => {
-    console.log('status changed')
-
     setIsCheckedStatus(!isCheckedStatus)
   }
 
