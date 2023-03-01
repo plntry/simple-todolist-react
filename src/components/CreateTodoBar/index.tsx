@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import CreateBtn from '../CreateBtn'
-import DescriptionInput from '../DescriptionInput'
-import TitleInput from '../TitleInput'
+import DescriptionInput from '../Inputs/DescriptionInput'
+import TitleInput from '../Inputs/TitleInput'
+import './CreateTodoBar.css'
 
 export const CreateTodoContext = React.createContext<ICreateNewTodoContext | null>(null)
 
@@ -9,18 +10,27 @@ function CreateTodoBar () {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+  const [isTitleEmpty, setIsTitleEmpty] = useState(false)
+  const [isDescriptionEmpty, setIsDescriptionEmpty] = useState(false)
+
   const value: ICreateNewTodoContext = {
     title,
     setTitle,
     description,
-    setDescription
+    setDescription,
+    isTitleEmpty,
+    setIsTitleEmpty,
+    isDescriptionEmpty,
+    setIsDescriptionEmpty
   }
 
   return (
     <CreateTodoContext.Provider value={value}>
-        <TitleInput />
-        <DescriptionInput />
-        <CreateBtn />
+        <div className='container'>
+          <TitleInput />
+          <DescriptionInput />
+          <CreateBtn />
+        </div>
     </CreateTodoContext.Provider>
   )
 }

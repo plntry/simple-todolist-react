@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 import { useState } from 'react'
 import StatusCheckbox from '../StatusCheckbox'
 import TodoInfoModal from '../TodoInfoModal'

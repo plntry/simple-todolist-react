@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { selectTodos } from '../../store/todosSlice'
 import TodoItem from '../TodoItem'
+import './TodosList.css'
 
 function TodosList () {
   const todos = Object.values(useSelector(selectTodos))[0]

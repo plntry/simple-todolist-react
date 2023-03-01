@@ -34,4 +34,8 @@ interface ICreateNewTodoContext {
   setTitle: Dispatch<SetStateAction<string>>
   description: string
   setDescription: Dispatch<SetStateAction<string>>
+  isTitleEmpty: boolean
+  setIsTitleEmpty: Dispatch<SetStateAction<string>>
+  isDescriptionEmpty: boolean
+  setIsDescriptionEmpty: Dispatch<SetStateAction<string>>
 }

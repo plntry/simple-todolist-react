@@ -1,0 +1,9 @@
+.emptyInput {
+    border-color: red;
+}
+
+.col-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}

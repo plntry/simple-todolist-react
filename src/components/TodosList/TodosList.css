@@ -1,0 +1,32 @@
+thead,
+tfoot {
+    background-color: rgb(208, 207, 207);
+    border-bottom: 30px solid rgb(219, 219, 219);
+}
+
+tbody {
+    background-color: rgb(176, 176, 176);
+}
+
+table {
+    margin-top: 100px;
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+th {
+    padding: 5px 40px;
+}
+
+td {
+    padding: 15px 40px;;
+}
+
+tr {
+    border-bottom: 12px solid rgb(219, 219, 219);
+}
+
+td {
+    text-align: center;
+}
