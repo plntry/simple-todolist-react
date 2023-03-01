@@ -19,13 +19,15 @@ function TodosList () {
         <tbody>
             {(todos.map((todo: ITodo) => {
               return (
+                <tr key={todo.id}>
                   <TodoItem
-                    key={todo.id}
-                    id={todo.id}
-                    title={todo.title}
-                    description={todo.description}
-                    status={todo.status}
+                      key={todo.id}
+                      id={todo.id}
+                      title={todo.title}
+                      description={todo.description}
+                      status={todo.status}
                   />
+                </tr>
               )
             }))}
         </tbody>

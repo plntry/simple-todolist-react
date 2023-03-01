@@ -9,8 +9,24 @@ interface ITodos {
   todos: IProduct[] | undefined
 }
 
-interface IStatusCheckbox {
+interface ITodoItemComp {
+  id: number
+  title: string
+  description: string
   status: boolean
+}
+
+interface IModalComp {
+  title: string
+  description: string
+  isCheckedStatus: boolean
+  handleOnChangeStatus: () => void
+  handleModal: () => void
+}
+
+interface IStatusCheckbox {
+  isCheckedStatus: boolean
+  handleOnChangeStatus: () => void
 }
 
 interface ICreateNewTodoContext {

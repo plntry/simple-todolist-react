@@ -1,37 +1,54 @@
+/* eslint-disable no-constant-condition */
 import { useState } from 'react'
+import StatusCheckbox from '../StatusCheckbox'
+import TodoInfoModal from '../TodoInfoModal'
 
-const TodoItem: React.FC<ITodo> = (props: ITodo) => {
+const TodoItem: React.FC<ITodoItemComp> = (props: ITodoItemComp) => {
   const [isCheckedStatus, setIsCheckedStatus] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
   const { id, title, description, status } = props
 
   const slicedText = (text: string) => {
-    return text.length > 13 ? text.slice(0, 13).concat('...') : text
+    return text.length > 13 ? text.slice(0, 12).concat('...') : text
   }
 
   const arrOfFields = [`${id}.`, slicedText(title), slicedText(description), status]
 
   const handleOnChangeStatus = () => {
+    console.log('status changed')
+
     setIsCheckedStatus(!isCheckedStatus)
   }
 
+  const handleModal = () => {
+    setOpenModal(!openModal)
+  }
+
   return (
-    <tr>
+    <>
       {arrOfFields.map((field) => {
         return (
-          <td key={arrOfFields.indexOf(field)}>
+          <td key={arrOfFields.indexOf(field)} onClick={handleModal}>
             {typeof field === 'boolean'
-              ? <input
-                    type='checkbox'
-                    name='statusCheckbox'
-                    onChange={handleOnChangeStatus}
+              ? <StatusCheckbox
+                  handleOnChangeStatus={handleOnChangeStatus}
+                  isCheckedStatus={isCheckedStatus}
                 />
               : <>{field}</>
             }
           </td>
         )
       })}
-    </tr>
+      {openModal
+        ? <td><TodoInfoModal key={id}
+                            title={title}
+                            description={description}
+                            isCheckedStatus={isCheckedStatus}
+                            handleOnChangeStatus={handleOnChangeStatus}
+                            handleModal={handleModal} /></td>
+        : <></>}
+    </>
   )
 }
 
